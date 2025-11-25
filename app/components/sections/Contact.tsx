@@ -1,0 +1,64 @@
+'use client';
+
+import { useInView } from 'react-intersection-observer';
+import { motion } from 'framer-motion';
+import { contactContent } from '@/app/data/content';
+import { fadeInUp } from '@/app/lib/animations';
+
+export default function Contact() {
+  const [ref, inView] = useInView({
+    triggerOnce: true,
+    threshold: 0.2,
+  });
+
+  return (
+    <section
+      id="contact"
+      ref={ref}
+      className="py-24 md:py-32 px-6 md:px-12 bg-black text-white flex justify-center"
+    >
+      <div className="max-w-4xl mx-auto w-full text-center">
+        <motion.h2
+          initial="initial"
+          animate={inView ? 'animate' : 'initial'}
+          variants={fadeInUp}
+          className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 md:mb-8 text-white"
+        >
+          {contactContent.title}
+        </motion.h2>
+        <motion.p
+          initial="initial"
+          animate={inView ? 'animate' : 'initial'}
+          variants={fadeInUp}
+          className="text-lg md:text-xl lg:text-2xl text-white/90 mb-8 md:mb-12 font-light"
+        >
+          Ready to bring your vision to life? Get in touch with us.
+        </motion.p>
+        <motion.div
+          initial="initial"
+          animate={inView ? 'animate' : 'initial'}
+          variants={fadeInUp}
+          className="space-y-4 md:space-y-6"
+        >
+          <div>
+            <a
+              href={`mailto:${contactContent.email}`}
+              className="text-lg md:text-xl lg:text-2xl text-white hover:text-[#00FF88] transition-colors inline-block"
+            >
+              {contactContent.email}
+            </a>
+          </div>
+          <div>
+            <a
+              href={`tel:${contactContent.phone}`}
+              className="text-lg md:text-xl lg:text-2xl text-white hover:text-[#00FF88] transition-colors inline-block"
+            >
+              {contactContent.phone}
+            </a>
+          </div>
+        </motion.div>
+      </div>
+    </section>
+  );
+}
+

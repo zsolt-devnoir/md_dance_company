@@ -37,13 +37,6 @@ export default function Hero() {
           >
             {heroContent.headline}
           </motion.h1>
-
-          <motion.p
-            variants={fadeInUp}
-            className="text-lg sm:text-xl md:text-2xl text-white/90 max-w-3xl mx-auto leading-relaxed font-light"
-          >
-            {heroContent.subheadline}
-          </motion.p>
         </motion.div>
       </div>
 

@@ -32,8 +32,8 @@ export default function Navigation() {
         initial={{ y: -100 }}
         animate={{ y: 0 }}
         transition={{ duration: 0.6 }}
-        className={`fixed top-0 left-0 right-0 z-40 px-6 md:px-12 lg:px-16 py-6 md:py-8 transition-all duration-300 ${
-          isScrolled ? "bg-white/95 backdrop-blur-sm" : "bg-transparent"
+        className={`fixed top-0 left-0 right-0 z-40 px-4 md:px-4 lg:px-4 py-4 md:py-4 transition-all duration-300 ${
+          isScrolled ? "bg-white/60 backdrop-blur-sm" : "bg-transparent"
         }`}
       >
         <div className="mx-auto flex items-center justify-between w-full">
@@ -48,7 +48,7 @@ export default function Navigation() {
               alt="MD Dance Company"
               width={150}
               height={119}
-              className="h-12 md:h-16 w-auto"
+              className="h-10 md:h-14 w-auto"
               priority
             />
           </motion.div>
@@ -58,7 +58,7 @@ export default function Navigation() {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             onClick={() => setIsContactOpen(true)}
-            className={`px-8 py-4 md:px-10 md:py-4 rounded-full font-medium transition-all duration-300 flex items-center justify-center ${
+            className={`px-4 py-2 md:px-10 md:py-2 rounded-full font-medium transition-all duration-300 flex items-center justify-center ${
               isScrolled
                 ? "bg-black text-white hover:bg-gray-800"
                 : "bg-white/10 backdrop-blur-sm text-white border border-white/20 hover:bg-white/20"

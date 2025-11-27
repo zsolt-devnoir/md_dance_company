@@ -1,11 +1,14 @@
 "use client";
 
+import { useState } from "react";
 import { useInView } from "react-intersection-observer";
 import { motion } from "framer-motion";
 import { contactContent } from "@/app/data/content";
 import { fadeInUp } from "@/app/lib/animations";
+import ContactModal from "@/app/components/ui/ContactModal";
 
 export default function Contact() {
+  const [isContactOpen, setIsContactOpen] = useState(false);
   const [ref, inView] = useInView({
     triggerOnce: true,
     threshold: 0.2,
@@ -56,8 +59,27 @@ export default function Contact() {
               {contactContent.phone}
             </a>
           </div>
+          <motion.div
+            initial="initial"
+            animate={inView ? "animate" : "initial"}
+            variants={fadeInUp}
+            className="pt-4 md:pt-6"
+          >
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              onClick={() => setIsContactOpen(true)}
+              className="px-6 py-3 md:px-10 md:py-3 rounded-full font-medium transition-all duration-300 bg-black text-white hover:bg-gray-800"
+            >
+              Contact us
+            </motion.button>
+          </motion.div>
         </motion.div>
       </div>
+      <ContactModal
+        isOpen={isContactOpen}
+        onClose={() => setIsContactOpen(false)}
+      />
     </section>
   );
 }

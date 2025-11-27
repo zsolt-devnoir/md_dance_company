@@ -156,7 +156,7 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
                       <select
                         {...register("projectType")}
                         id="projectType"
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#00FF88] focus:border-transparent transition-all bg-white"
+                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-highlight focus:border-transparent transition-all bg-white"
                       >
                         <option value="">Select a project type</option>
                         <option value="sport-ceremony">Sport Ceremony</option>
@@ -184,7 +184,7 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
                         {...register("message")}
                         id="message"
                         rows={5}
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#00FF88] focus:border-transparent transition-all resize-none"
+                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-highlight focus:border-transparent transition-all resize-none"
                       />
                       {errors.message && (
                         <p className="text-red-500 text-sm mt-1">

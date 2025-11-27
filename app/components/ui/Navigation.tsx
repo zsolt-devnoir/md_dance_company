@@ -33,7 +33,7 @@ export default function Navigation() {
         animate={{ y: 0 }}
         transition={{ duration: 0.6 }}
         className={`fixed top-0 left-0 right-0 z-40 px-4 md:px-4 lg:px-4 py-4 md:py-4 transition-all duration-300 ${
-          isScrolled ? "bg-white/60 backdrop-blur-sm" : "bg-transparent"
+          isScrolled ? "bg-light-bg/60 backdrop-blur-sm" : "bg-transparent"
         }`}
       >
         <div className="mx-auto flex items-center justify-between w-full">
@@ -60,8 +60,8 @@ export default function Navigation() {
             onClick={() => setIsContactOpen(true)}
             className={`px-4 py-2 md:px-10 md:py-3 rounded-full font-medium transition-all duration-300 flex items-center justify-center ${
               isScrolled
-                ? "bg-black text-white hover:bg-gray-800"
-                : "bg-white/10 backdrop-blur-sm text-white border border-white/20 hover:bg-white/20"
+                ? "bg-highlight text-foreground hover:bg-accent-light"
+                : "bg-light-bg/10 backdrop-blur-sm text-foreground border border-foreground/20 hover:bg-foreground/20"
             }`}
           >
             Contact us

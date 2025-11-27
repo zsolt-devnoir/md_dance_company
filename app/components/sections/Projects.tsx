@@ -16,7 +16,7 @@ export default function Projects() {
     <section
       id="projects"
       ref={ref}
-      className="py-24 md:py-32 px-6 md:px-12 bg-white flex justify-center"
+      className="py-24 md:py-32 px-6 md:px-12 bg-light-bg flex justify-center"
     >
       <div className="max-w-7xl mx-auto w-full">
         <motion.h2

@@ -38,7 +38,7 @@ export default function Partners() {
   const duplicatedLogos = [...partnerLogos, ...partnerLogos];
 
   return (
-    <section className="py-12 md:py-16 bg-white overflow-hidden">
+    <section className="py-12 md:py-16 bg-light-bg overflow-hidden">
       <div className="relative">
         <div
           ref={containerRef}

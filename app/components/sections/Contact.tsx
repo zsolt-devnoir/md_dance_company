@@ -18,7 +18,7 @@ export default function Contact() {
     <section
       id="contact"
       ref={ref}
-      className="py-24 md:py-32 px-6 md:px-12 bg-white text-black flex justify-center"
+      className="py-24 md:py-32 px-6 md:px-12 bg-light-bg text-black flex justify-center"
     >
       <div className="max-w-4xl mx-auto w-full text-center">
         <motion.h2
@@ -46,7 +46,7 @@ export default function Contact() {
           <div>
             <a
               href={`mailto:${contactContent.email}`}
-              className="text-lg md:text-xl lg:text-2xl text-black hover:text-[#00FF88] transition-colors inline-block"
+              className="text-lg md:text-xl lg:text-2xl text-black hover:text-highlight transition-colors inline-block"
             >
               {contactContent.email}
             </a>
@@ -54,7 +54,7 @@ export default function Contact() {
           <div>
             <a
               href={`tel:${contactContent.phone}`}
-              className="text-lg md:text-xl lg:text-2xl text-black hover:text-[#00FF88] transition-colors inline-block"
+              className="text-lg md:text-xl lg:text-2xl text-black hover:text-highlight transition-colors inline-block"
             >
               {contactContent.phone}
             </a>
@@ -69,7 +69,7 @@ export default function Contact() {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               onClick={() => setIsContactOpen(true)}
-              className="px-6 py-3 md:px-10 md:py-3 rounded-full font-medium transition-all duration-300 bg-black text-white hover:bg-gray-800"
+              className="px-6 py-3 md:px-10 md:py-3 rounded-full font-medium transition-all duration-300 bg-highlight text-foreground hover:bg-accent-light"
             >
               Contact us
             </motion.button>

@@ -42,7 +42,7 @@ export default function SocialLinks() {
   return (
     <section
       ref={ref}
-      className="py-24 md:py-32 px-6 md:px-12 bg-white flex justify-center"
+      className="py-24 md:py-32 px-6 md:px-12 bg-light-bg flex justify-center"
     >
       <div className="max-w-7xl mx-auto w-full">
         <motion.h2
@@ -70,10 +70,10 @@ export default function SocialLinks() {
               rel="noopener noreferrer"
               className="flex flex-col items-center gap-4 p-6 rounded-lg hover:bg-gray-100 transition-colors group"
             >
-              <div className="text-black group-hover:text-[#6600ff] transition-colors">
+              <div className="text-black group-hover:text-highlight transition-colors">
                 {social.icon}
               </div>
-              <span className="text-lg font-medium text-black group-hover:text-[#6600ff]">
+              <span className="text-lg font-medium text-black group-hover:text-highlight">
                 {social.name}
               </span>
             </motion.a>

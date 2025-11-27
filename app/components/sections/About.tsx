@@ -16,7 +16,7 @@ export default function About() {
     <section
       id="about"
       ref={ref}
-      className="py-24 md:py-32 px-6 md:px-12 bg-black text-white flex justify-center"
+      className="py-24 md:py-32 px-6 md:px-12 bg-black text-foreground flex justify-center"
     >
       <div className="max-w-7xl mx-auto w-full">
         <motion.div
@@ -29,13 +29,13 @@ export default function About() {
           <div className="space-y-6 md:space-y-8">
             <motion.h2
               variants={fadeInUp}
-              className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 md:mb-8"
+              className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 md:mb-8"
             >
               {aboutContent.title}
             </motion.h2>
             <motion.p
               variants={fadeInUp}
-              className="text-lg md:text-xl lg:text-2xl leading-relaxed text-white/90 font-light"
+              className="text-lg md:text-xl lg:text-2xl leading-relaxed text-foreground/90 font-light"
             >
               {aboutContent.mission}
             </motion.p>

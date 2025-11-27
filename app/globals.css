@@ -1,15 +1,12 @@
 @import "tailwindcss";
 
-:root {
-  --background: #000000;
-  --foreground: #ffffff;
-  --highlight: #00ff88;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --color-highlight: var(--highlight);
+@theme {
+  --color-background: #000000;
+  --color-foreground: #ffffff;
+  --color-highlight: #000000;
+  --color-accent-light: #333333;
+  --color-accent-dark: #000000;
+  --color-light-bg: #ffffff;
   --font-sans: var(--font-inter);
 }
 
@@ -33,8 +30,8 @@ html {
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
+  background: theme(colors.background);
+  color: theme(colors.foreground);
   font-family: var(--font-inter), system-ui, -apple-system, BlinkMacSystemFont,
     "Segoe UI", Roboto, sans-serif;
   overflow-x: hidden;
@@ -72,16 +69,16 @@ html.lenis {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #333;
+  background: theme(colors.highlight);
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #555;
+  background: theme(colors.accent-light);
 }
 
 /* Selection */
 ::selection {
-  background: var(--highlight);
-  color: #000;
+  background: theme(colors.highlight);
+  color: theme(colors.foreground);
 }

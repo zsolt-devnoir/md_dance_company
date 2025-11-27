@@ -59,7 +59,7 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
             exit={{ opacity: 0, scale: 0.9, y: 20 }}
             className="fixed inset-0 z-50 flex items-center justify-center p-4"
           >
-            <div className="bg-white text-black w-full max-w-4xl max-h-[90vh] overflow-y-auto rounded-2xl shadow-2xl relative">
+            <div className="bg-light-bg text-black w-full max-w-4xl max-h-[90vh] overflow-y-auto rounded-2xl shadow-2xl relative">
               {/* Close Button */}
               <button
                 onClick={(e) => {
@@ -102,7 +102,7 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
                         {...register("name")}
                         type="text"
                         id="name"
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#00FF88] focus:border-transparent transition-all"
+                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-highlight focus:border-transparent transition-all"
                       />
                       {errors.name && (
                         <p className="text-red-500 text-sm mt-1">
@@ -122,7 +122,7 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
                         {...register("email")}
                         type="email"
                         id="email"
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#00FF88] focus:border-transparent transition-all"
+                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-highlight focus:border-transparent transition-all"
                       />
                       {errors.email && (
                         <p className="text-red-500 text-sm mt-1">
@@ -142,7 +142,7 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
                         {...register("company")}
                         type="text"
                         id="company"
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#00FF88] focus:border-transparent transition-all"
+                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-highlight focus:border-transparent transition-all"
                       />
                     </div>
 
@@ -197,7 +197,7 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
                       <button
                         type="submit"
                         disabled={isSubmitting}
-                        className="px-6 py-3 bg-black text-white rounded-lg hover:bg-gray-800 transition-colors disabled:opacity-50 font-medium"
+                        className="px-6 py-3 bg-highlight text-foreground rounded-lg hover:bg-accent-light transition-colors disabled:opacity-50 font-medium"
                       >
                         {isSubmitting ? "Sending..." : "Send Message"}
                       </button>
@@ -213,7 +213,7 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
                 </div>
 
                 {/* Contact Info Sidebar */}
-                <div className="bg-black text-white p-6 md:p-8 lg:p-12">
+                <div className="bg-black text-foreground p-6 md:p-8 lg:p-12">
                   <h3 className="text-xl md:text-2xl font-bold mb-6">
                     Get in Touch
                   </h3>
@@ -224,7 +224,7 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
                       </p>
                       <a
                         href={`mailto:${contactContent.email}`}
-                        className="text-base md:text-lg hover:text-[#00FF88] transition-colors block"
+                        className="text-base md:text-lg hover:text-accent-light transition-colors block"
                       >
                         {contactContent.email}
                       </a>
@@ -235,7 +235,7 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
                       </p>
                       <a
                         href={`tel:${contactContent.phone}`}
-                        className="text-base md:text-lg hover:text-[#00FF88] transition-colors block"
+                        className="text-base md:text-lg hover:text-accent-light transition-colors block"
                       >
                         {contactContent.phone}
                       </a>

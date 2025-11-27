@@ -25,7 +25,7 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-black text-white py-12 px-6 md:px-12">
+    <footer className="bg-black text-foreground py-12 px-6 md:px-12">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
           {/* Logo */}
@@ -46,7 +46,7 @@ export default function Footer() {
               <li>
                 <a
                   href="#services"
-                  className="text-white/60 hover:text-white transition-colors"
+                  className="text-foreground/60 hover:text-foreground transition-colors"
                 >
                   Services
                 </a>
@@ -54,7 +54,7 @@ export default function Footer() {
               <li>
                 <a
                   href="#projects"
-                  className="text-white/60 hover:text-white transition-colors"
+                  className="text-foreground/60 hover:text-foreground transition-colors"
                 >
                   Projects
                 </a>
@@ -62,7 +62,7 @@ export default function Footer() {
               <li>
                 <a
                   href="#about"
-                  className="text-white/60 hover:text-white transition-colors"
+                  className="text-foreground/60 hover:text-foreground transition-colors"
                 >
                   About
                 </a>
@@ -70,7 +70,7 @@ export default function Footer() {
               <li>
                 <a
                   href="#contact"
-                  className="text-white/60 hover:text-white transition-colors"
+                  className="text-foreground/60 hover:text-foreground transition-colors"
                 >
                   Contact
                 </a>
@@ -111,7 +111,7 @@ export default function Footer() {
         </div>
 
         {/* Copyright */}
-        <div className="border-t border-white/10 pt-8 text-center text-white/60 text-sm">
+        <div className="border-t border-foreground/10 pt-8 text-center text-foreground/60 text-sm">
           <p>&copy; {currentYear} MD Dance Company. All rights reserved.</p>
         </div>
       </div>

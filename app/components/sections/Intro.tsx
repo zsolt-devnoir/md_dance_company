@@ -14,7 +14,7 @@ export default function Intro() {
   return (
     <section
       ref={ref}
-      className="py-16 md:py-24 px-6 md:px-12 bg-white text-black flex justify-center"
+      className="py-16 md:py-24 px-6 md:px-12 bg-light-bg text-black flex justify-center"
     >
       <div className="max-w-4xl mx-auto">
         <motion.h3

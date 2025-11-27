@@ -16,14 +16,14 @@ export default function Services() {
     <section
       id="services"
       ref={ref}
-      className="py-24 md:py-32 px-6 md:px-12 bg-black text-white flex justify-center"
+      className="py-24 md:py-32 px-6 md:px-12 bg-black text-foreground flex justify-center"
     >
       <div className="max-w-7xl mx-auto w-full">
         <motion.h2
           initial="initial"
           animate={inView ? "animate" : "initial"}
           variants={fadeInUp}
-          className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-20 md:mb-24 text-center"
+          className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-20 md:mb-24 text-center"
         >
           Our Services
         </motion.h2>
@@ -55,22 +55,22 @@ export default function Services() {
 
               {/* Text content with fade */}
               <div className="relative z-10 flex-1 flex flex-col justify-end bg-gradient-to-t from-black via-black to-transparent p-6 md:p-8">
-                <h3 className="text-xl md:text-2xl lg:text-3xl font-bold mb-3 md:mb-4 text-white">
+                <h3 className="text-xl md:text-2xl lg:text-3xl font-bold mb-3 md:mb-4 text-foreground">
                   {service.title}
                 </h3>
-                <p className="text-white/90 text-base md:text-lg leading-relaxed mb-3">
+                <p className="text-foreground/90 text-base md:text-lg leading-relaxed mb-3">
                   {service.description}
                 </p>
 
                 {/* Additional info on hover */}
-                <p className="text-white/70 text-xs md:text-sm leading-relaxed md:max-h-0 overflow-hidden opacity-100 max-h-96 md:opacity-0 md:group-hover:max-h-96 md:group-hover:opacity-100 transition-all duration-300 ease-in-out">
+                <p className="text-foreground/70 text-xs md:text-sm leading-relaxed md:max-h-0 overflow-hidden opacity-100 max-h-96 md:opacity-0 md:group-hover:max-h-96 md:group-hover:opacity-100 transition-all duration-300 ease-in-out">
                   {service.additionalInfo}
                 </p>
               </div>
 
               {/* Hover Overlay */}
               <motion.div
-                className="absolute inset-0 bg-[#00FF88]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"
+                className="absolute inset-0 bg-highlight/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"
                 initial={false}
               />
             </motion.div>

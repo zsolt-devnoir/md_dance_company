@@ -48,10 +48,10 @@ export default function ProjectCard({ project }: ProjectCardProps) {
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.4 }}
         >
-          <h3 className="text-xl md:text-2xl font-bold text-white mb-2">
+          <h3 className="text-xl md:text-2xl font-bold text-foreground mb-2">
             {project.title}
           </h3>
-          <p className="text-white/90 text-sm md:text-base">
+          <p className="text-foreground/90 text-sm md:text-base">
             {project.description}
           </p>
         </motion.div>

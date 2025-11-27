@@ -1,7 +1,7 @@
-'use client';
+"use client";
 
-import Image from 'next/image';
-import { socialLinks } from '@/app/lib/constants';
+import Image from "next/image";
+import { socialLinks } from "@/app/lib/constants";
 
 const socialIcons = {
   linkedin: (
@@ -35,7 +35,7 @@ export default function Footer() {
               alt="MD Dance Company"
               width={120}
               height={95}
-              className="h-auto w-auto mb-4"
+              className="h-auto w-1/4 mb-4"
             />
           </div>
 
@@ -44,22 +44,34 @@ export default function Footer() {
             <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
             <ul className="space-y-2">
               <li>
-                <a href="#services" className="text-white/60 hover:text-white transition-colors">
+                <a
+                  href="#services"
+                  className="text-white/60 hover:text-white transition-colors"
+                >
                   Services
                 </a>
               </li>
               <li>
-                <a href="#projects" className="text-white/60 hover:text-white transition-colors">
+                <a
+                  href="#projects"
+                  className="text-white/60 hover:text-white transition-colors"
+                >
                   Projects
                 </a>
               </li>
               <li>
-                <a href="#about" className="text-white/60 hover:text-white transition-colors">
+                <a
+                  href="#about"
+                  className="text-white/60 hover:text-white transition-colors"
+                >
                   About
                 </a>
               </li>
               <li>
-                <a href="#contact" className="text-white/60 hover:text-white transition-colors">
+                <a
+                  href="#contact"
+                  className="text-white/60 hover:text-white transition-colors"
+                >
                   Contact
                 </a>
               </li>
@@ -106,4 +118,3 @@ export default function Footer() {
     </footer>
   );
 }
-

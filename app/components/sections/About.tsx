@@ -1,10 +1,10 @@
-'use client';
+"use client";
 
-import { useInView } from 'react-intersection-observer';
-import { motion } from 'framer-motion';
-import { aboutContent } from '@/app/data/content';
-import { fadeInUp, staggerContainer } from '@/app/lib/animations';
-import Image from 'next/image';
+import { useInView } from "react-intersection-observer";
+import { motion } from "framer-motion";
+import { aboutContent } from "@/app/data/content";
+import { fadeInUp, staggerContainer } from "@/app/lib/animations";
+import Image from "next/image";
 
 export default function About() {
   const [ref, inView] = useInView({
@@ -22,7 +22,7 @@ export default function About() {
         <motion.div
           variants={staggerContainer}
           initial="initial"
-          animate={inView ? 'animate' : 'initial'}
+          animate={inView ? "animate" : "initial"}
           className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center"
         >
           {/* Text Content */}
@@ -44,7 +44,7 @@ export default function About() {
           {/* Team Image */}
           <motion.div
             variants={fadeInUp}
-            className="relative aspect-[4/5] rounded-lg overflow-hidden"
+            className="relative aspect-[4/5] rounded-2xl overflow-hidden"
           >
             <Image
               src="/we.jpg"
@@ -59,4 +59,3 @@ export default function About() {
     </section>
   );
 }
-

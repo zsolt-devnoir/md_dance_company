@@ -1,10 +1,10 @@
-'use client';
+"use client";
 
-import { useInView } from 'react-intersection-observer';
-import { motion } from 'framer-motion';
-import { servicesContent } from '@/app/data/content';
-import { fadeInUp, staggerContainer, hoverScale } from '@/app/lib/animations';
-import Image from 'next/image';
+import { useInView } from "react-intersection-observer";
+import { motion } from "framer-motion";
+import { servicesContent } from "@/app/data/content";
+import { fadeInUp, staggerContainer, hoverScale } from "@/app/lib/animations";
+import Image from "next/image";
 
 export default function Services() {
   const [ref, inView] = useInView({
@@ -21,7 +21,7 @@ export default function Services() {
       <div className="max-w-7xl mx-auto w-full">
         <motion.h2
           initial="initial"
-          animate={inView ? 'animate' : 'initial'}
+          animate={inView ? "animate" : "initial"}
           variants={fadeInUp}
           className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-20 md:mb-24 text-center"
         >
@@ -30,7 +30,7 @@ export default function Services() {
         <motion.div
           variants={staggerContainer}
           initial="initial"
-          animate={inView ? 'animate' : 'initial'}
+          animate={inView ? "animate" : "initial"}
           className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8"
         >
           {servicesContent.map((service, index) => (
@@ -38,10 +38,10 @@ export default function Services() {
               key={index}
               variants={fadeInUp}
               {...hoverScale}
-              className="relative group overflow-hidden rounded-lg min-h-[500px] md:min-h-[600px] flex flex-col"
+              className="relative group overflow-hidden rounded-2xl min-h-[500px] md:min-h-[600px] flex flex-col"
             >
               {/* Image on top */}
-              <div className="relative h-2/3 flex-shrink-0">
+              <div className="relative h-1/3 flex-shrink-0 bg-red-500">
                 <Image
                   src={service.image}
                   alt={service.title}
@@ -61,9 +61,9 @@ export default function Services() {
                 <p className="text-white/90 text-base md:text-lg leading-relaxed mb-3">
                   {service.description}
                 </p>
-                
+
                 {/* Additional info on hover */}
-                <p className="text-white/70 text-xs md:text-sm leading-relaxed max-h-0 overflow-hidden opacity-0 group-hover:max-h-96 group-hover:opacity-100 transition-all duration-300 ease-in-out">
+                <p className="text-white/70 text-xs md:text-sm leading-relaxed md:max-h-0 overflow-hidden opacity-100 max-h-96 md:opacity-0 md:group-hover:max-h-96 md:group-hover:opacity-100 transition-all duration-300 ease-in-out">
                   {service.additionalInfo}
                 </p>
               </div>
@@ -80,4 +80,3 @@ export default function Services() {
     </section>
   );
 }
-

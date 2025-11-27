@@ -1,10 +1,10 @@
-'use client';
+"use client";
 
-import { useInView } from 'react-intersection-observer';
-import { motion } from 'framer-motion';
-import { projects } from '@/app/data/projects';
-import { fadeInUp, staggerContainer } from '@/app/lib/animations';
-import ProjectCard from '../ui/ProjectCard';
+import { useInView } from "react-intersection-observer";
+import { motion } from "framer-motion";
+import { projects } from "@/app/data/projects";
+import { fadeInUp, fancyCardAnimation } from "@/app/lib/animations";
+import ProjectCard from "../ui/ProjectCard";
 
 export default function Projects() {
   const [ref, inView] = useInView({
@@ -21,7 +21,7 @@ export default function Projects() {
       <div className="max-w-7xl mx-auto w-full">
         <motion.h2
           initial="initial"
-          animate={inView ? 'animate' : 'initial'}
+          animate={inView ? "animate" : "initial"}
           variants={fadeInUp}
           className="text-5xl md:text-6xl font-bold text-black mb-20 md:mb-24 text-center"
         >
@@ -29,25 +29,28 @@ export default function Projects() {
         </motion.h2>
 
         {/* Masonry Grid */}
-        <motion.div
-          variants={staggerContainer}
-          initial="initial"
-          animate={inView ? 'animate' : 'initial'}
+        <div
           className="columns-1 md:columns-2 lg:columns-3 gap-4 md:gap-6"
-          style={{ columnGap: '1.5rem' }}
+          style={{ columnGap: "1.5rem" }}
         >
-          {projects.map((project, index) => (
+          {projects.map((project) => (
             <motion.div
               key={project.id}
-              variants={fadeInUp}
+              initial="initial"
+              whileInView="animate"
+              viewport={{ once: true, margin: "0px" }}
+              variants={fancyCardAnimation}
               className="break-inside-avoid mb-4 md:mb-6 w-full"
+              style={{
+                perspective: "1000px",
+                transformStyle: "preserve-3d",
+              }}
             >
               <ProjectCard project={project} />
             </motion.div>
           ))}
-        </motion.div>
+        </div>
       </div>
     </section>
   );
 }
-

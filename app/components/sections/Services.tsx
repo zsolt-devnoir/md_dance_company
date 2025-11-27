@@ -41,7 +41,7 @@ export default function Services() {
               className="relative group overflow-hidden rounded-2xl min-h-[500px] md:min-h-[600px] flex flex-col"
             >
               {/* Image on top */}
-              <div className="relative h-1/3 flex-shrink-0 bg-red-500">
+              <div className="relative h-1/2 md:h-2/5 flex-shrink-0 bg-red-500">
                 <Image
                   src={service.image}
                   alt={service.title}

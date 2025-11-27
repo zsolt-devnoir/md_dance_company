@@ -1,14 +1,13 @@
-import Hero from './components/sections/Hero';
-import Intro from './components/sections/Intro';
-import Partners from './components/sections/Partners';
-import Services from './components/sections/Services';
-import Projects from './components/sections/Projects';
-import About from './components/sections/About';
-import SocialLinks from './components/sections/SocialLinks';
-import Contact from './components/sections/Contact';
-import Navigation from './components/ui/Navigation';
-import Footer from './components/ui/Footer';
-import LoadingScreen from './components/ui/LoadingScreen';
+import Hero from "./components/sections/Hero";
+import Intro from "./components/sections/Intro";
+import Partners from "./components/sections/Partners";
+import Services from "./components/sections/Services";
+import Projects from "./components/sections/Projects";
+import About from "./components/sections/About";
+import Contact from "./components/sections/Contact";
+import Navigation from "./components/ui/Navigation";
+import Footer from "./components/ui/Footer";
+import LoadingScreen from "./components/ui/LoadingScreen";
 
 export default function Home() {
   return (
@@ -22,7 +21,7 @@ export default function Home() {
         <Services />
         <Projects />
         <About />
-        <SocialLinks />
+        {/* <SocialLinks /> */}
         <Contact />
       </main>
       <Footer />

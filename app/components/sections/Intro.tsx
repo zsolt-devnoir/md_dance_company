@@ -8,7 +8,7 @@ import { introContent } from "@/app/data/content";
 export default function Intro() {
   const [ref, inView] = useInView({
     triggerOnce: true,
-    threshold: 0.25,
+    threshold: 0.5,
   });
 
   return (

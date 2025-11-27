@@ -58,7 +58,7 @@ export default function Navigation() {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             onClick={() => setIsContactOpen(true)}
-            className={`px-4 py-2 md:px-10 md:py-2 rounded-full font-medium transition-all duration-300 flex items-center justify-center ${
+            className={`px-4 py-2 md:px-10 md:py-3 rounded-full font-medium transition-all duration-300 flex items-center justify-center ${
               isScrolled
                 ? "bg-black text-white hover:bg-gray-800"
                 : "bg-white/10 backdrop-blur-sm text-white border border-white/20 hover:bg-white/20"

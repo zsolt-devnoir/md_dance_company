@@ -15,7 +15,7 @@ export const servicesContent = [
       "Creative direction, choreography and full-scale production for high-energy ceremonies.",
     additionalInfo:
       "From Olympic ceremonies to championship openings, we deliver spectacular performances that capture the essence of competition and celebration.",
-    image: "/ceremony.jpg",
+    image: "/projects/1.jpeg",
   },
   {
     title: "Creative Production",
@@ -23,7 +23,7 @@ export const servicesContent = [
       "Brand shows, commercials, music videos, TV and custom visual performances.",
     additionalInfo:
       "End-to-end production services including concept development, choreography, direction, and post-production for brands and artists worldwide.",
-    image: "/creative_production.jpg",
+    image: "/projects/2.jpg",
   },
   {
     title: "Talent Management",
@@ -31,7 +31,7 @@ export const servicesContent = [
       "Professional dancers, performers and models for productions worldwide.",
     additionalInfo:
       "Our roster includes world-class performers ready for international productions, events, and campaigns across all genres and styles.",
-    image: "/talent_management.jpg",
+    image: "/projects/3.jpg",
   },
 ];
 

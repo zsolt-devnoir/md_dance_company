@@ -1,19 +1,35 @@
 "use client";
 
+import { useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import { heroContent } from "@/app/data/content";
 import { fadeInUp, staggerContainer } from "@/app/lib/animations";
 
-export default function Hero() {
+interface HeroProps {
+  isLoading: boolean;
+}
+
+export default function Hero({ isLoading }: HeroProps) {
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    if (!isLoading && videoRef.current) {
+      videoRef.current.play().catch((error) => {
+        console.error("Error playing video:", error);
+      });
+    }
+  }, [isLoading]);
+
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-black">
       {/* Background Video */}
       <div className="absolute inset-0 w-full h-full">
         <video
-          autoPlay
+          ref={videoRef}
           loop
           muted
           playsInline
+          preload="auto"
           className="absolute inset-0 w-full h-full object-cover"
         >
           <source src="/hero.mp4" type="video/mp4" />

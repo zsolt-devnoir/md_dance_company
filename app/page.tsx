@@ -1,3 +1,6 @@
+"use client";
+
+import { useState, useEffect } from "react";
 import Hero from "./components/sections/Hero";
 import Intro from "./components/sections/Intro";
 import Partners from "./components/sections/Partners";
@@ -10,12 +13,19 @@ import Footer from "./components/ui/Footer";
 import LoadingScreen from "./components/ui/LoadingScreen";
 
 export default function Home() {
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => setIsLoading(false), 2000);
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
     <>
-      <LoadingScreen />
+      <LoadingScreen isLoading={isLoading} />
       <Navigation />
       <main>
-        <Hero />
+        <Hero isLoading={isLoading} />
         <Intro />
         <Partners />
         <Services />

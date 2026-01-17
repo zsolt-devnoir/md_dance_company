@@ -2,18 +2,15 @@
 
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import Image from "next/image";
 
-export default function LoadingScreen() {
-  const [isLoading, setIsLoading] = useState(true);
+interface LoadingScreenProps {
+  isLoading: boolean;
+}
+
+export default function LoadingScreen({ isLoading }: LoadingScreenProps) {
   const [frame, setFrame] = useState(0);
   const FRAME_SIZE = 140;
   const FRAME_COUNT = 5; // 700px / 140px
-
-  useEffect(() => {
-    const timer = setTimeout(() => setIsLoading(false), 2000);
-    return () => clearTimeout(timer);
-  }, []);
 
   useEffect(() => {
     const interval = setInterval(() => {

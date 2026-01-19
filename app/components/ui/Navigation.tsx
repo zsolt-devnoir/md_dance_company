@@ -8,7 +8,6 @@ import ContactModal from "./ContactModal";
 export default function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isContactOpen, setIsContactOpen] = useState(false);
-  const [logoVariant, setLogoVariant] = useState<"light" | "dark">("light");
 
   useEffect(() => {
     const handleScroll = () => {
@@ -18,13 +17,6 @@ export default function Navigation() {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-
-  // Determine logo variant based on scroll position (simplified - can be enhanced)
-  useEffect(() => {
-    // For now, use light logo on dark background, dark logo on light background
-    // This can be enhanced to detect section backgrounds
-    setLogoVariant(isScrolled ? "dark" : "light");
-  }, [isScrolled]);
 
   return (
     <>
@@ -44,11 +36,13 @@ export default function Navigation() {
             className="relative flex items-center"
           >
             <Image
-              src={logoVariant === "light" ? "/logo.svg" : "/logo_dark.svg"}
+              src="/logo.png"
               alt="MD Dance Company"
               width={150}
               height={119}
-              className="h-10 md:h-14 w-auto"
+              className={`h-10 md:h-14 w-auto transition-all duration-300 ${
+                isScrolled ? "invert" : ""
+              }`}
               priority
             />
           </motion.div>

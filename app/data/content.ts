@@ -15,7 +15,7 @@ export const servicesContent = [
       "Creative direction, choreography and full-scale production for high-energy ceremonies.",
     additionalInfo:
       "From Olympic ceremonies to championship openings, we deliver spectacular performances that capture the essence of competition and celebration.",
-    image: "/projects/1.jpeg",
+    image: "/projects/5.jpg",
   },
   {
     title: "Creative Production",
@@ -39,7 +39,7 @@ export const aboutContent = {
   title: "Who We Are",
   mission:
     "At MD Dance Company, we believe in the transformative power of movement. Our mission is to push creative boundaries, delivering innovative choreography and production excellence that resonates with audiences globally. We combine artistic vision with technical precision, creating performances that inspire, engage, and leave lasting impressions.",
-  image: "/placeholder-team.jpg", // Replace with actual image
+  image: "/we.jpg", // Replace with actual image
 };
 
 export const contactContent = {

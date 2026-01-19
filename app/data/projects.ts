@@ -18,7 +18,7 @@ export const projects: Project[] = [
     id: "2",
     title: "UEFA Championship Opening",
     description: "Grand-scale opening ceremony with 200+ performers.",
-    image: "/projects/5.jpg",
+    image: "/projects/1.jpeg",
   },
   {
     id: "3",

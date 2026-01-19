@@ -2,20 +2,31 @@
 
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import Image from "next/image";
 
 interface LoadingScreenProps {
   isLoading: boolean;
 }
 
+const LOADER_IMAGES = [
+  "/loading/loader-1.png",
+  "/loading/loader-2.png",
+  "/loading/loader-3.png",
+  "/loading/loader-4.png",
+  "/loading/loader-5.png",
+  "/loading/loader-6.png",
+  "/loading/loader-7.png",
+  "/loading/loader-8.png",
+  "/loading/loader-9.png",
+];
+
 export default function LoadingScreen({ isLoading }: LoadingScreenProps) {
   const [frame, setFrame] = useState(0);
-  const FRAME_SIZE = 140;
-  const FRAME_COUNT = 5; // 700px / 140px
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setFrame((f) => (f + 1) % FRAME_COUNT);
-    }, 300); // 0.5s per frame
+      setFrame((f) => (f + 1) % LOADER_IMAGES.length);
+    }, 250);
 
     return () => clearInterval(interval);
   }, []);
@@ -36,30 +47,20 @@ export default function LoadingScreen({ isLoading }: LoadingScreenProps) {
               initial={{ scale: 1, opacity: 0 }}
               animate={{ scale: 1.5, opacity: 1 }}
               transition={{ duration: 0.8, ease: "easeOut" }}
-              className="relative flex items-center justify-center w-[140px] h-[140px]"
+              className="relative w-[200px] h-[200px] md:w-[280px] md:h-[280px]"
             >
-              {/* Sprite sheet background (behind logo) */}
-              <motion.div
-                className="absolute w-[140px] h-[140px] bg-[url('/site_loader.png')] bg-no-repeat"
-                style={{
-                  backgroundSize: `${
-                    FRAME_SIZE * FRAME_COUNT
-                  }px ${FRAME_SIZE}px`,
-                  backgroundPosition: `${-frame * FRAME_SIZE}px 0px`,
-                }}
-              />
-
-              {/* Logo on top
-              <div className="relative z-10">
+              {LOADER_IMAGES.map((src, index) => (
                 <Image
-                  src="/logo.svg"
+                  key={src}
+                  src={src}
                   alt="MD Dance Company"
-                  width={200}
-                  height={159}
-                  priority
-                  className="w-[180px] md:w-[200px] lg:w-[220px] h-auto"
+                  fill
+                  priority={index === 0}
+                  className={`object-contain transition-opacity duration-150 ${
+                    index === frame ? "opacity-100" : "opacity-0"
+                  }`}
                 />
-              </div> */}
+              ))}
             </motion.div>
           </div>
         </motion.div>

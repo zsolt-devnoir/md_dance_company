@@ -31,7 +31,7 @@ export default function Footer() {
           {/* Logo */}
           <div>
             <Image
-              src="/logo.svg"
+              src="/logo.png"
               alt="MD Dance Company"
               width={120}
               height={95}

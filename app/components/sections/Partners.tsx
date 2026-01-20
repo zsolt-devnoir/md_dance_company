@@ -55,7 +55,7 @@ export default function Partners() {
                 alt={`Partner logo ${index + 1}`}
                 width={200}
                 height={80}
-                className="h-full w-auto object-contain transition-all duration-300 hover:grayscale-0 opacity-70 hover:opacity-100"
+                className="h-full w-auto object-contain transition-all duration-300 hover:grayscale-0 opacity-70 hover:opacity-100 max-w-[200px]"
                 style={{ filter: 'grayscale(100%)' }}
               />
             </div>

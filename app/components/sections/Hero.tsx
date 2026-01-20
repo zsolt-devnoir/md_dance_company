@@ -45,13 +45,21 @@ export default function Hero({ isLoading }: HeroProps) {
           variants={staggerContainer}
           initial="initial"
           animate="animate"
-          className="space-y-6 md:space-y-8 flex items-center flex-col"
+          className="flex items-center flex-col"
         >
-          <motion.h1
+          <motion.span
             variants={fadeInUp}
-            className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-bold text-foreground leading-[1.1] tracking-tight"
+            className="text-xs md:text-sm font-bold text-foreground/70 tracking-[0.5em] uppercase mb-6 md:mb-8"
           >
             {heroContent.headline}
+          </motion.span>
+          <motion.h1
+            variants={fadeInUp}
+            className="text-5xl sm:text-7xl md:text-8xl lg:text-[10rem] font-bold text-foreground leading-[0.9] tracking-tighter"
+          >
+            {heroContent.headline2.split(" ").slice(0, 2).join(" ")}
+            <br />
+            {heroContent.headline2.split(" ").slice(2).join(" ")}
           </motion.h1>
         </motion.div>
       </div>

@@ -29,6 +29,9 @@ export const partnerLogos = [
   "/partners/kpmg-1-logo-png-transparent.png",
   "/partners/logo_garnier.svg",
   "/partners/logo_huawei.svg",
-  "/partners/logo_xtrm.svg",
   "/partners/UEFA_Womens_Champions_League_Logo.png",
+  "/partners/mcdonalds_PNG17.png",
+  "/partners/Miniso_2023.svg",
+  "/partners/budapest-park-logo-png_seeklogo-410144 (1).png",
+  "/partners/UEFA_Europa_League_logo_(2024_version).svg (1).png",
 ];

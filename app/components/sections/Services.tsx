@@ -38,10 +38,10 @@ export default function Services() {
               key={index}
               variants={fadeInUp}
               {...hoverScale}
-              className="relative group overflow-hidden rounded-2xl min-h-[500px] md:min-h-[600px] flex flex-col"
+              className="relative group overflow-hidden rounded-2xl min-h-[500px] md:min-h-[650px] flex flex-col"
             >
               {/* Image on top */}
-              <div className="relative h-1/2 md:h-2/5 flex-shrink-0">
+              <div className="relative h-1/2 md:h-2/5 shrink-0">
                 <Image
                   src={service.image}
                   alt={service.title}
@@ -50,20 +50,20 @@ export default function Services() {
                   sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                 />
                 {/* Fade gradient from image to text */}
-                <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/60" />
+                <div className="absolute inset-0 bg-linear-to-b from-transparent via-transparent to-black/60" />
               </div>
 
               {/* Text content with fade */}
-              <div className="relative z-10 flex-1 flex flex-col justify-end bg-gradient-to-t from-black via-black to-transparent p-6 md:p-8">
-                <h3 className="text-xl md:text-2xl lg:text-3xl font-bold mb-3 md:mb-4 text-foreground">
+              <div className="relative z-10 flex-1 flex flex-col justify-end bg-linear-to-t from-black via-black to-transparent p-6 md:p-8">
+                <h3 className="text-xl md:text-2xl lg:text-3xl font-bold mb-3 md:mb-4 text-foreground min-h-[2.6em]">
                   {service.title}
                 </h3>
-                <p className="text-foreground/90 text-base md:text-lg leading-relaxed mb-3">
+                <p className="text-foreground/90 text-base lg:text-lg leading-relaxed mb-3">
                   {service.description}
                 </p>
 
                 {/* Additional info on hover */}
-                <p className="text-foreground/70 text-xs md:text-sm leading-relaxed md:max-h-0 overflow-hidden opacity-100 max-h-96 md:opacity-0 md:group-hover:max-h-96 md:group-hover:opacity-100 transition-all duration-300 ease-in-out">
+                <p className="text-foreground/70 text-xs lg:text-sm leading-relaxed lg:max-h-0 overflow-hidden opacity-100 max-h-96 md:opacity-0 md:group-hover:max-h-96 md:group-hover:opacity-100 transition-all duration-300 ease-in-out">
                   {service.additionalInfo}
                 </p>
               </div>

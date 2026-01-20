@@ -1,20 +1,21 @@
 // Placeholder content for the website
 
 export const heroContent = {
-  headline: "MD Dance Company – Creative Production in Motion",
+  headline: "MD Dance Company",
+  headline2: "We Turn Movement Into Moments",
 };
 
 export const introContent = {
-  text: "We blend artistic vision with technical excellence, creating unforgettable experiences that captivate audiences worldwide. Our passion for movement and storytelling drives every project, from intimate brand activations to grand-scale ceremonies.",
+  text: "We combine artistic vision with technical precision, delivering productions that amplify cultural identity through movement. From stadium-scale ceremonies to brand activations, we create experiences that connect audiences to place, emotion, and story.",
 };
 
 export const servicesContent = [
   {
     title: "Sport Ceremonies & Opening Shows",
     description:
-      "Creative direction, choreography and full-scale production for high-energy ceremonies.",
+      "Creative direction, choreography, and full-scale production for high-energy ceremonies.",
     additionalInfo:
-      "From Olympic ceremonies to championship openings, we deliver spectacular performances that capture the essence of competition and celebration.",
+      "From Olympic ceremonies to championship openings, we connect logistics, creative vision, and choreography into one seamless production, delivering performances that elevate competition into celebration.",
     image: "/projects/5.jpg",
   },
   {
@@ -28,17 +29,17 @@ export const servicesContent = [
   {
     title: "Talent Management",
     description:
-      "Professional dancers, performers and models for productions worldwide.",
+      "Professional dancers, performers, and choreographers for productions worldwide.",
     additionalInfo:
-      "Our roster includes world-class performers ready for international productions, events, and campaigns across all genres and styles.",
+      "We develop and represent talent through our own training programs and dance academy, while delivering full-service casting and talent coordination. Our roster includes world-class performers ready for international productions, events, and campaigns across all genres and styles.",
     image: "/projects/3.jpg",
   },
 ];
 
 export const aboutContent = {
-  title: "Who We Are",
+  title: "Who we are",
   mission:
-    "At MD Dance Company, we believe in the transformative power of movement. Our mission is to push creative boundaries, delivering innovative choreography and production excellence that resonates with audiences globally. We combine artistic vision with technical precision, creating performances that inspire, engage, and leave lasting impressions.",
+    "We think beyond performance. We combine creative vision, production expertise, and a strong talent ecosystem to deliver movement-driven solutions that align with brand and event objectives. With in-house studios, a dance academy, and a deep understanding of both local and international productions, we ensure quality, consistency, and impact at every stage—from concept to execution.",
   image: "/we.jpg", // Replace with actual image
 };
 

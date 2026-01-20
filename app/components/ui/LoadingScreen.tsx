@@ -16,8 +16,6 @@ const LOADER_IMAGES = [
   "/loading/loader-5.png",
   "/loading/loader-6.png",
   "/loading/loader-7.png",
-  "/loading/loader-8.png",
-  "/loading/loader-9.png",
 ];
 
 export default function LoadingScreen({ isLoading }: LoadingScreenProps) {

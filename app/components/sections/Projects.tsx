@@ -41,10 +41,6 @@ export default function Projects() {
               viewport={{ once: true, margin: "0px" }}
               variants={fancyCardAnimation}
               className="break-inside-avoid mb-4 md:mb-6 w-full"
-              style={{
-                perspective: "1000px",
-                transformStyle: "preserve-3d",
-              }}
             >
               <ProjectCard project={project} />
             </motion.div>

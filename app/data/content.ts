@@ -45,6 +45,6 @@ export const aboutContent = {
 
 export const contactContent = {
   title: "Let's Work Together",
-  email: "info@mddancecompany.com",
-  phone: "+36 1 234 5678",
+  email: "md.dancecompany.hu@gmail.com",
+  phone: "+36 30 633 66 82",
 };

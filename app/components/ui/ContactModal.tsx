@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
@@ -22,6 +23,15 @@ interface ContactModalProps {
 }
 
 export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
+  useEffect(() => {
+    if (!isOpen) return;
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    return () => {
+      document.body.style.overflow = previousOverflow;
+    };
+  }, [isOpen]);
+
   const {
     register,
     handleSubmit,
@@ -30,13 +40,28 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
   } = useForm<FormData>({
     resolver: zodResolver(formSchema),
   });
+  const [submitError, setSubmitError] = useState<string | null>(null);
+  const [submitSuccess, setSubmitSuccess] = useState(false);
 
   const onSubmit = async (data: FormData) => {
-    // Handle form submission
-    console.log("Form data:", data);
-    // Here you would typically send to an API
+    setSubmitError(null);
+    setSubmitSuccess(false);
+    const response = await fetch("/api/contact", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(data),
+    });
+
+    if (!response.ok) {
+      const payload = await response.json().catch(() => null);
+      const message =
+        payload?.error ?? "Sorry, something went wrong. Please try again.";
+      setSubmitError(message);
+      return;
+    }
+
+    setSubmitSuccess(true);
     reset();
-    onClose();
   };
 
   return (
@@ -57,9 +82,10 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
             initial={{ opacity: 0, scale: 0.9, y: 20 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.9, y: 20 }}
-            className="fixed inset-0 z-50 flex items-center justify-center p-4"
+            className="fixed inset-0 z-50 flex items-start justify-center p-4 overflow-y-auto overscroll-contain"
+            data-lenis-prevent
           >
-            <div className="bg-light-bg text-black w-full max-w-4xl max-h-[90vh] overflow-y-auto rounded-2xl shadow-2xl relative">
+            <div className="bg-light-bg text-black w-full max-w-4xl rounded-2xl shadow-2xl relative my-4 md:max-h-[90vh] md:overflow-hidden">
               {/* Close Button */}
               <button
                 onClick={(e) => {
@@ -86,7 +112,7 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
               </button>
               <div className="grid md:grid-cols-2">
                 {/* Form */}
-                <div className="p-6 md:p-8 lg:p-12">
+                <div className="p-6 md:p-8 lg:p-12 md:max-h-[90vh] md:overflow-y-auto overscroll-contain">
                   <h2 className="text-2xl md:text-3xl font-bold mb-6">
                     {contactContent.title}
                   </h2>
@@ -193,6 +219,18 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
                       )}
                     </div>
 
+                    {(submitError || submitSuccess) && (
+                      <div className="pt-2 text-sm">
+                        {submitError && (
+                          <p className="text-red-600">{submitError}</p>
+                        )}
+                        {submitSuccess && (
+                          <p className="text-green-600">
+                            Thanks! Your message has been sent.
+                          </p>
+                        )}
+                      </div>
+                    )}
                     <div className="flex gap-4 pt-2">
                       <button
                         type="submit"

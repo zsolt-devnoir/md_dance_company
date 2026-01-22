@@ -14,13 +14,15 @@ export const breakpoints = {
 // Social media links
 export const socialLinks = {
   linkedin: "https://linkedin.com/company/md-dance-company",
-  instagram: "https://instagram.com/md_dance_company",
-  tiktok: "https://tiktok.com/@md_dance_company",
+  instagram: "https://www.instagram.com/md_dancecompany/",
+  tiktok: "https://www.tiktok.com/@md_dancecompany?lang=en",
+  facebook: "https://www.facebook.com/md.dancecompany.hu",
   // Add more as needed
 };
 
 // Partner logos
 export const partnerLogos = [
+  "/partners/BP_Helios_logo.svg",
   "/partners/116098733_1557782717721861_5110662273803478123_n.jpg",
   "/partners/200px-UEFA_Super_Cup_2013.png",
   "/partners/709px-HM-Logo.svg.png",

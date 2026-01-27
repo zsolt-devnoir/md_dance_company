@@ -17,7 +17,7 @@ export const projects: Project[] = [
   {
     id: "2",
     title: "UEFA European Final",
-    description: "At UEFA European Finals, we produce large-scale opening shows with hundreds of dancers, managing costumes, logistics, and full production coordination to energize both performers and audiences.",
+    description: "At UEFA European League Final, we produce large-scale opening shows with hundreds of dancers, managing costumes, logistics, and full production coordination to energize both performers and audiences.",
     
     image: "/projects/1.jpeg",
   },

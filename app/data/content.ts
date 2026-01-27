@@ -39,7 +39,7 @@ export const servicesContent = [
 export const aboutContent = {
   title: "Who we are",
   mission:
-    "We think beyond performance. We combine creative vision, production expertise, and a strong talent ecosystem to deliver movement-driven solutions that align with brand and event objectives. With in-house studios, a dance academy, and a deep understanding of both local and international productions, we ensure quality, consistency, and impact at every stage—from concept to execution.",
+    "We think beyond performance. We combine creative vision, production expertise, and a strong talent ecosystem to deliver movement-driven solutions that align with brand and event objectives. With in-house studios, a dance academy, and a deep understanding of both local and international productions, we ensure quality, consistency, and impact at every stage - from concept to execution.",
   image: "/we.jpg", // Replace with actual image
 };
 
